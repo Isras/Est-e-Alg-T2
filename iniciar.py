@@ -1,6 +1,7 @@
+pais = []
+filhoseterras = []
+numerosterras = []
 def separarultimageracao(diretorio):
-    pais = []
-    filhoseterras = []
     with open(diretorio, "r") as pergaminho:
         next(pergaminho)
         for line in pergaminho:
@@ -22,8 +23,17 @@ def separarultimageracao(diretorio):
         if nomedofilho in pais:
             filhoseterras.remove(elemento)
 
+    print(filhoseterras)
+
 def encontraralvo():
-    
+    for elemento in filhoseterras:
+        nomedofilho, quantiaterras = elemento.split(" ")
+        numerosterras.append(quantiaterras)
+    maiornumero = max(numerosterras)
+    for elemento in filhoseterras:
+        if str(maiornumero) in elemento:
+            print(elemento)
 
 
-separarultimageracao("casosdeteste/caso10c.txt")
+separarultimageracao("casosdeteste/caso04a.txt")
+encontraralvo()
