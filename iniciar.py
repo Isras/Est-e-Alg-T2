@@ -1,4 +1,4 @@
-arquivo = "Est-e-Alg-T2\casosdeteste\casotestepdf.txt"
+arquivo = "Est-e-Alg-T2\casosdeteste\caso10c.txt"
 pais = []
 filhoseterras = []
 numerosterras = []
@@ -23,8 +23,6 @@ def separarultimageracao(diretorio):
         nomedofilho, quantiaterras = elemento.split(" ")
         if nomedofilho in pais:
             filhoseterras.remove(elemento)
-
-    print(filhoseterras)
 
 def encontraralvo():
     for elemento in filhoseterras:
