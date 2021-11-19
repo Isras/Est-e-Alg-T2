@@ -1,3 +1,4 @@
+arquivo = "Est-e-Alg-T2\casosdeteste\casotestepdf.txt"
 pais = []
 filhoseterras = []
 numerosterras = []
@@ -34,6 +35,5 @@ def encontraralvo():
         if str(maiornumero) in elemento:
             print(elemento)
 
-
-separarultimageracao("casosdeteste/caso04a.txt")
+separarultimageracao(arquivo)
 encontraralvo()
